@@ -1,0 +1,122 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"fname": "Comrade",
+			"lname": "Putin",
+			"email": "comrade@putin.kgb"
+		},
+		{
+			"id": 2,
+			"fname": "Kobe",
+			"lname": "Bryant",
+			"email": "kobe@5rings.bg"
+		},
+		{
+			"id": 3,
+			"fname": "SmarterThan",
+			"lname": "ABusDriver",
+			"email": "bus@driver.bg"
+		}
+	],
+
+	"epics": [
+		{
+			"id": 1,
+			"title": "Na 3 moreta",
+			"issues": [{
+				"id": 1 	
+			}],
+
+		},
+		{
+			"id": 2,
+			"title": "Annex Bosphorus",
+			"issues": [{
+				"id": 2,
+				"id": 3
+			}],
+		}
+	],
+
+	"issues": [
+		{
+			"id": 1,
+			"type": "task",
+			"issueTitle": "El Chapo",
+			"userId": 1,
+			"issueComments": [{
+				"id": 1	
+			}],
+			"subTaskIds": [{
+				"id": 1
+			}]
+		},
+		{
+			"id": 2,
+			"type": "bug",
+			"issueTitle": "Computer won't start",
+			"userId": 2,
+			"issueComments": [{
+				"id": 2	
+			}],
+			"subTaskIds": [{
+				"id": 2	
+			}]
+		},
+		{
+			"id": 3,
+			"type": "task",
+			"issueTitle": "Issue 3",
+			"userId": 3,
+			"issueComments": [{
+				"id": 3	
+			}],
+			"subTaskIds": [{
+				"id": 3
+			}]
+		}
+	],
+
+	"subTasks": [
+		{
+			"id": 1,
+			"title": "Cabron",
+			"userId": 1,
+			"description": "Desc1"
+		},
+		{
+			"id": 2,
+			"title": "Title1",
+			"userId": 2,
+			"description": "Desc2"
+		},
+		{
+			"id": 3,
+			"title": "Title2",
+			"userId": 3,
+			"description": "Desc3"
+		}
+	],
+
+	"issueComments": [
+		{
+			"id": 1,
+			"comment": "Comment 1",
+			"userId": 2,
+			"issueId": 1
+		},
+		{
+			"id": 2,
+			"comment": "Comment 2 Yo Soy Fiesta",
+			"userId": 3,
+			"issueId": 2	
+		},
+		{
+			"id": 3,
+			"comment": "Comment 3 Pucai Kume!",
+			"userId": 1,
+			"issueId": 3
+		}
+	]
+}
