@@ -3,14 +3,17 @@ $(document).ready(function() {
 	var _url = 'http://localhost:3000';
 	var _home = 'http://localhost:8080/Bug_And_Issue_Tracker';
 
-//	$(document).on('click', '#log-in', function() {
-//		$.get(_url + '/users', {
-//			email: $('#login-email').val(),
-//			password: $('#login-password').val()
-//		}).done(function(data) {
-//			console.log(data);
-//		});
-//	});
+	$(document).on('click', '#log-in', function() {
+		$.get(_url + '/users', {
+			email: $('#login-email').val(),
+			password: $('#login-password').val()
+		}).done(function(data) {
+			if (data.length != 0) {
+				$.cookie('Session', JSON.stringify(data));
+				window.location.href = _home + '/index.html';
+			}
+		});
+	});
 
 	$(document).on('click', '#reg', function() {
 		if ($('#password').val() == $('#conf-password').val())
