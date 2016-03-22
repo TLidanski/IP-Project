@@ -2,11 +2,11 @@
   "users": [
     {
       "id": 1,
-      "fname": "Comrade",
+      "fname": "Tovarish",
       "lname": "Putin",
       "email": "comrade@putin.kgb",
       "password": "lal",
-      "picture": ""
+      "picture": "http://www.rightwingwatch.org/sites/default/files/images/a_story_images/vladimir-putin_416x416.jpg"
     },
     {
       "id": 2,

@@ -9,7 +9,7 @@ $(document).ready(function() {
 			password: $('#login-password').val()
 		}).done(function(data) {
 			if (data.length != 0) {
-				$.cookie('Session', JSON.stringify(data));
+				$.cookie('Session', JSON.stringify(data), {path: '/', expires: 999});
 				window.location.href = _home + '/index.html';
 			}
 		});
