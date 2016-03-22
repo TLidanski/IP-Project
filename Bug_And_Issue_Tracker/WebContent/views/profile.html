@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Edit your Profile</title>
+	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+	<div class="container" style="padding-top: 60px;">
+	  <h1 class="page-header"></h1>
+	  <div class="row">
+	    <!-- left column -->
+	    <div class="col-md-4 col-sm-6 col-xs-12">
+	      <div class="text-center">
+	        <img src="" class="avatar img-circle img-thumbnail" alt="avatar" id="profile-pic">
+	        <h6>Paste an image url, comrade</h6>
+	        <input type="text" class="text-center center-block well well-sm" id="pic-url">
+	      </div>
+	    </div>
+	    <!-- edit form column -->
+	    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+	      <!-- <div class="alert alert-info alert-dismissable">
+	        <a class="panel-close close" data-dismiss="alert">×</a> 
+	        <i class="fa fa-coffee"></i>
+	        This is an <strong>.alert</strong>. Use this to show important messages to the user.
+	      </div> -->
+	      <h3>Personal info</h3>
+	      <form class="form-horizontal" role="form">
+	        <div class="form-group">
+	          <label class="col-lg-3 control-label">First name:</label>
+	          <div class="col-lg-8">
+	            <input class="form-control" placeholder="" type="text" id="fname">
+	          </div>
+	        </div>
+	        <div class="form-group">
+	          <label class="col-lg-3 control-label">Last name:</label>
+	          <div class="col-lg-8">
+	            <input class="form-control" placeholder="" type="text" id="lname">
+	          </div>
+	        </div>
+	        
+	        <div class="form-group">
+	          <label class="col-lg-3 control-label">Email:</label>
+	          <div class="col-lg-8">
+	            <input class="form-control" placeholder="" type="text" id="email">
+	          </div>
+	        </div>
+	       
+	        <!-- <div class="form-group">
+	          <label class="col-md-3 control-label">Username:</label>
+	          <div class="col-md-8">
+	            <input class="form-control" value="janeuser" type="text">
+	          </div>
+	        </div> -->
+	        <div class="form-group">
+	          <label class="col-md-3 control-label">Password:</label>
+	          <div class="col-md-8">
+	            <input class="form-control" placeholder="******" type="password" id="password">
+	          </div>
+	        </div>
+	        <div class="form-group">
+	          <label class="col-md-3 control-label">Confirm password:</label>
+	          <div class="col-md-8">
+	            <input class="form-control" placeholder="******" type="password" id="conf-pass">
+	          </div>
+	        </div>
+	        <div class="form-group">
+	          <label class="col-md-3 control-label"></label>
+	          <div class="col-md-8">
+	            <input class="btn btn-danger" value="Save Changes" type="button" id="sub-changes">
+	            <span></span>
+	            <input class="btn btn-default" value="Cancel" type="reset">
+	          </div>
+	        </div>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+
+	<script src="../libs/jquery-2.1.4.min.js"></script>
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../libs/jquery.cookie.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

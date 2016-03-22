@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Onramp;
+    src: url(../fonts/ONRAMP.ttf);
+}
 
 body {
 	background-image: url("../images/red.jpg");
