@@ -6,25 +6,27 @@ $(document).ready(function() {
 	if ($.cookie('Session')) {
 		var userData = JSON.parse($.cookie('Session'));
 
-		$('.page-header').text(userData[0].fname + ' ' + userData[0].lname);
-		$('#profile-pic').attr('src', userData[0].picture);
-		$('#fname').attr('placeholder', userData[0].fname);
-		$('#lname').attr('placeholder', userData[0].lname);
-		$('#email').attr('placeholder', userData[0].email);
+		$('.page-header').text(userData.fname + ' ' + userData.lname);
+		$('#profile-pic').attr('src', userData.picture);
+		$('#fname').attr('placeholder', userData.fname);
+		$('#lname').attr('placeholder', userData.lname);
+		$('#email').attr('placeholder', userData.email);
 
 		$(document).on('click', '#sub-changes', function() {
 			$.ajax({
-				url: _url + '/users/' + userData[0].id,
+				url: _url + '/users/' + userData.id,
 				type: 'PATCH',
 				data: {
 					fname: ($('#fname').val().length > 0) ? $('#fname').val() : undefined,
 					lname: ($('#lname').val().length > 0) ? $('#lname').val() : undefined,
 					email: ($('#email').val().length > 0) ? $('#email').val() : undefined,
 					password: ($('#password').val().length > 0 
-						&& $('#pass').val() == $('#conf-pass').val()) ? $('#pass').val() : undefined,
+						&& $('#password').val() === $('#conf-pass').val()) ? $('#password').val() : undefined,
 					picture: ($('#pic-url').val().length > 0) ? $('#pic-url').val() : undefined
 				},
-				success: function() {
+				success: function(data) {
+					$.cookie('Session', JSON.stringify(data), {path: '/', expires: 999});
+					
 					location.reload();
 				}
 			});
