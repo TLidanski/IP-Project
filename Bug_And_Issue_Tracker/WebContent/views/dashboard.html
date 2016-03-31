@@ -5,10 +5,11 @@
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-	<title>Dashboard</title>
+	<title>Comrades in Code</title>
 
 	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/dashboard.css" id="theme-stylesheet">
+	<link rel="stylesheet" type="text/css" href="../libs/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -23,12 +24,8 @@
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						Comrade
-					</div>
-					<div class="profile-usertitle-job">
-						Developer
-					</div>
+					<div class="profile-usertitle-name"></div>
+					<div class="profile-usertitle-job"></div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
@@ -67,10 +64,37 @@
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-			   Some user related content goes here...
+			   <div class="panel panel-default">
+			   		<div class="panel-heading"><i class="fa fa-code"></i>  Assigned to me</div>
+			   		<div class="panel-body" id="issues"></div>
+			   </div>
             </div>
 		</div>
 	</div>
+</div>
+
+<div id="issueModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+    	<div class="well">
+	        <ul id="subTaskList">
+
+	        </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 

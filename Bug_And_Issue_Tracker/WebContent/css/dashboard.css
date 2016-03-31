@@ -7,6 +7,10 @@ body {
   background: #F1F3FA;
 }
 
+#issues {
+  height: 450px;
+}
+
 /* Profile container */
 .profile {
   margin: 20px 0;
