@@ -83,9 +83,15 @@
       "type": "task",
       "issueTitle": "El Chapo",
       "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "priority": "Major",
+      "status": "In Progress",
       "issueComments": [
         {
-          "id": 1
+          "id": 1,
+          "fname": "Tovarish",
+          "lname": "Putin"
         }
       ],
       "subTaskIds": [
@@ -99,9 +105,15 @@
       "type": "bug",
       "issueTitle": "Computer won't start",
       "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "priority": "Minor",
+      "status": "In Progress",
       "issueComments": [
         {
-          "id": 2
+          "id": 2,
+          "fname": "Kobe",
+          "lname": "Bryant"
         }
       ],
       "subTaskIds": [
@@ -115,9 +127,15 @@
       "type": "task",
       "issueTitle": "Issue 3",
       "userId": 3,
+      "userFname": "Kobe",
+      "userLname": "Bryant",
+      "priority": "Major",
+      "status": "Resolved",
       "issueComments": [
         {
-          "id": 3
+          "id": 3,
+          "fname": "SmarterThan",
+          "lname": "ABusDriver"
         }
       ],
       "subTaskIds": [
@@ -132,13 +150,23 @@
       "id": 1,
       "title": "Cabron",
       "issueId": 1,
-      "description": "Desc1"
+      "description": "Сквозь грозы сияло нам солнце свободы, И Ленин великий нам путь озарил. Нас вырастил Сталин - на верность народу На труд и на подвиги нас вдохновил.",
+      "assignee": {
+        "id": 1,
+        "fname": "Tovarish",
+        "lname": "Putin"
+      }
     },
     {
       "id": 2,
       "title": "An 26",
       "issueId": 1,
-      "description": "Desc2"
+      "description": "Союз нерушимый республик свободных Сплотила навеки Великая Русь. Да здравствует созданный волей народов Единый, могучий Советский Союз!",
+      "assignee": {
+        "id": 1,
+        "fname": "Tovarish",
+        "lname": "Putin"
+      }
     },
     {
       "id": 3,
@@ -152,19 +180,48 @@
       "id": 1,
       "comment": "Comment 1",
       "userId": 2,
+      "userFname": "Kobe",
+      "userLname": "Bryant",
       "issueId": 1
     },
     {
       "id": 2,
       "comment": "Comment 2 Yo Soy Fiesta",
       "userId": 3,
+      "userFname": "SmarterThan",
+      "userLname": "ABusDriver",
       "issueId": 2
     },
     {
       "id": 3,
       "comment": "Comment 3 Pucai Kume!",
       "userId": 1,
-      "issueId": 3
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "issueId": 1
+    },
+    {
+      "comment": "Първи коментар",
+      "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "issueId": 1,
+      "id": 7
+    },
+    {
+      "comment": "Truda ne krasi 4oveka",
+      "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "id": 8
+    },
+    {
+      "comment": "Aide",
+      "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "issueId": 1,
+      "id": 9
     }
   ]
 }
