@@ -3,11 +3,31 @@
     src: url(../fonts/ONRAMP.ttf);
 }
 
+* {
+  font-family: 'Onramp';
+  font-size: 105%;
+}
+
 body {
   background: #F1F3FA;
 }
 
+h {
+  font-size: 30px;
+}
+
+.soviet {
+  font-size: 50px;
+  text-align: center;
+  color: #b30000;
+}
+
 #issues {
+  height: 450px;
+}
+
+.panel {
+  overflow-y: scroll;
   height: 450px;
 }
 
@@ -20,6 +40,8 @@ body {
 .profile-sidebar {
   padding: 20px 0 10px 0;
   background: #fff;
+  font-size: 105%;
+  /*opacity: 0.6;*/
 }
 
 .profile-userpic img {
@@ -35,21 +57,24 @@ body {
 .profile-usertitle {
   text-align: center;
   margin-top: 20px;
+  font-size: 105%;
 }
 
 .profile-usertitle-name {
-  color: #5a7391;
-  font-size: 16px;
+  color: black;
+  /*font-size: 16px;*/
   font-weight: 600;
   margin-bottom: 7px;
+  font-size: 150%;
 }
 
 .profile-usertitle-job {
   text-transform: uppercase;
-  color: #5b9bd1;
-  font-size: 12px;
+  color: #b30000;
+  /*font-size: 12px;*/
   font-weight: 600;
   margin-bottom: 15px;
+  font-size: 150%;
 }
 
 .profile-userbuttons {
@@ -59,7 +84,7 @@ body {
 
 .profile-userbuttons .btn {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 100%;
   font-weight: 600;
   padding: 6px 15px;
   margin-right: 5px;
@@ -82,8 +107,8 @@ body {
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 14px;
+  color: #000000;
+  font-size: 100%;
   font-weight: 400;
 }
 
@@ -94,7 +119,7 @@ body {
 
 .profile-usermenu ul li a:hover {
   background-color: #fafcfd;
-  color: #5b9bd1;
+  color: #b30000;
 }
 
 .profile-usermenu ul li.active {
@@ -102,7 +127,7 @@ body {
 }
 
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
+  color: #b30000;
   background-color: #f6f9fb;
   border-left: 2px solid #5b9bd1;
   margin-left: -2px;
