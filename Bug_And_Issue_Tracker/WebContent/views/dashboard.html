@@ -30,8 +30,7 @@
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm">Follow</button>
-					<button type="button" class="btn btn-danger btn-sm">Message</button>
+					<button type="button" class="btn btn-success btn-sm" id="create-task">Create Task</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
@@ -71,6 +70,38 @@
 	</div>
 </div>
 
+
+<!-- Modal -->
+	<div id="create-modal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Glory to the workers</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<b>Title:</b>
+	        <input type="text" class="form-control" id="issue-title"></input>
+
+	        <b>Type:</b><br>
+	        <select id="issue-type" class="form-control">
+	        	<option value="task">Task</option>
+	        	<option value="bug">Bug</option>
+	        </select>
+
+	        <b>Priority:</b>
+	        <input type="radio" value="Major" name="priority"> Major
+	        <input type="radio" value="Minor" name="priority"> Minor
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger create-btn">&#9773; Create Task</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
 
 	<script src="../libs/jquery-2.1.4.min.js"></script>
 

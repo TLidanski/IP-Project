@@ -87,6 +87,8 @@
       "userLname": "Putin",
       "priority": "Major",
       "status": "In Progress",
+      "created": "16-4-2016",
+      "updated": "16-4-2016",
       "issueComments": [
         {
           "id": 1,
@@ -109,6 +111,8 @@
       "userLname": "Putin",
       "priority": "Minor",
       "status": "In Progress",
+      "created": "16-4-2016",
+      "updated": "16-4-2016",
       "issueComments": [
         {
           "id": 2,
@@ -131,6 +135,8 @@
       "userLname": "Bryant",
       "priority": "Major",
       "status": "Resolved",
+      "created": "16-4-2016",
+      "updated": "16-4-2016",
       "issueComments": [
         {
           "id": 3,
@@ -207,13 +213,6 @@
       "userLname": "Putin",
       "issueId": 1,
       "id": 7
-    },
-    {
-      "comment": "Truda ne krasi 4oveka",
-      "userId": 1,
-      "userFname": "Tovarish",
-      "userLname": "Putin",
-      "id": 8
     },
     {
       "comment": "Aide",

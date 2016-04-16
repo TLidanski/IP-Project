@@ -1,6 +1,27 @@
 @font-face {
-    font-family: Onramp;
+    font-family: 'Onramp';
     src: url(../fonts/ONRAMP.ttf);
+}
+
+#comment-area {
+  height: 40px;
+  font-size: 1.3em;
+}
+
+.form-control {
+  font-size: 1.3em;
+}
+
+b {
+  font-size: 1.4em;
+}
+
+.create-btn {
+    font-size: 1.5em;
+}
+
+.modal-title {
+    font-size: 1.5em;
 }
 
 * {
@@ -12,7 +33,7 @@ body {
   background: #F1F3FA;
 }
 
-h {
+h1 {
   font-size: 30px;
 }
 

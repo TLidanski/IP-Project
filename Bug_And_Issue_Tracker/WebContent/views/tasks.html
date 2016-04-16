@@ -9,7 +9,16 @@
 	<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-	<h>Details</h>
+	<div class="row">
+		<div class="col-xs-12">
+			<button class="btn btn-danger pull-left">Assign to me</button>
+			<button class="btn btn-default pull-left">Open</button>
+			<button class="btn btn-success pull-left">Resolve</button>
+			<button class="btn btn-primary pull-left">Start Progress</button>
+		</div>
+	</div>
+
+	<h1>Details</h1>
 	<div class="row">
 		
 		<div class="col-md-6">			
@@ -27,23 +36,23 @@
 	</div>
 
 	<br>
-	<!-- <h>Description</h>
+	<!-- <h1>Description</h1>
 	<div class="row">
 		<div class="well"></div>
 	</div> -->
 
-	<h>Sub Tasks</h>
+	<h1>Sub Tasks</h1>
 	<div class="row">
 		<div class="list-group" id="sub-tasks"></div>
 	</div>
 
 	<br>
-	<h>Comments</h>
+	<h1>Comments</h1>
 	<div class="row">
 		<div class="list-group" id="comment-list"></div>
 	</div>
 
-	<button class="btn btn-danger pull-right cmnt-modal-btn" issue-id="">Comment</button>
+	<button class="btn btn-danger pull-right cmnt-modal-btn">Comment</button>
 
 
 	<!-- Modal -->

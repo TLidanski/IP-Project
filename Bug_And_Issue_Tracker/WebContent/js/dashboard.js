@@ -52,6 +52,23 @@ $(document).ready(function() {
 			$('.panel-heading').prepend('<i class="fa fa-code"></i>');
 		});
 
+		$(document).on('click', '#create-task', function() {
+			$('#create-modal').modal();
+		});
+
+		$(document).on('click', '.create-btn', function() {
+			$.post(_url+'/issues', {
+				type: $('#issue-type option:selected').val(),
+				issueTitle: $('#issue-title').val(),
+				priority: $('input[name=priority]:checked').val(),
+				status: 'Open',
+				created: getDate(),
+				updated: getDate()
+			}).done(function() {
+				location.reload();
+			});
+		});
+
 	} else {
 		window.location.href = _home + '/index.html';
 	}
@@ -70,11 +87,9 @@ $(document).ready(function() {
 				if (data.length != 0) {
 					$('#issues').append('<div class="list-group" id="issue-list"></div>');
 					$.each(data, function(i, val) {
-						var glyph = (val.type == 'task') ? '<i class="fa fa-wrench"></i>' : 
-							'<i class="fa fa-bomb"></i>';
-						var span = (val.status == 'Resolved') ? 
-						'<span class="label label-success pull-right">Resolved</span>' :
-						'<span class="label label-primary pull-right">In Progress</span>';
+						var glyph = getGlyph(val.type); 
+						
+						var span = getProgress(val.status);
 
 						$('#issue-list').append('<button class="list-group-item issue" issue-type="'
 							+val.type+'" id="'+val.id+'">'+
@@ -119,19 +134,20 @@ $(document).ready(function() {
 
 	function getTaskView(issue) {
 		$.get(_home+'/views/tasks.html', {}).done(function(resp) {
-			var priority = (issue.priority = 'Major') ? 
-			'<i class="fa fa-arrow-up" aria-hidden="true" style="color: red;"></i>' :
-			'<i class="fa fa-arrow-down" aria-hidden="true" style="color: green;"></i>';
+			var priority = getPriority(issue.priority);
 
-			var span = (issue.status == 'Resolved') ? 
-				'<span class="label label-success">Resolved</span>' :
-				'<span class="label label-primary">In Progress</span>';
+			var span = getProgress(issue.status);
+
+			var assignee = (issue.userId == null) ? 
+			'<a href="#">Assign to me</a>' : issue.userFname + ' ' + issue.userLname;
 
 			$('#issues').html(resp);
 			$('#type').append(issue.type);
-			$('#assignee').append(issue.userFname + ' ' + issue.userLname);
+			$('#assignee').append(assignee);
 			$('#priority').append(priority);
 			$('#status').append(span);
+			$('#created').append(issue.created);
+			$('#updated').append(issue.updated);
 		
 			$('.cmnt-modal-btn').attr('issue-id', issue.id);
 		});
@@ -146,5 +162,50 @@ $(document).ready(function() {
 
 		getSubTasks(id);
 		getIssueComments(id);
+	}
+
+	function getDate() {
+		var d = new Date();
+		var curr_date = d.getDate();
+		var curr_month = d.getMonth() + 1;
+		var curr_year = d.getFullYear();
+
+		return curr_date + '-' + curr_month + '-' + curr_year;
+	}
+
+	function getGlyph(val) {
+		switch(val) {
+		    case 'task':
+		        return '<i class="fa fa-wrench"></i>';
+		        break;
+		    case 'bug':
+		        return '<i class="fa fa-bomb"></i>';
+		        break;
+		}
+	}
+
+	function getProgress(val) {
+		switch(val) {
+		    case 'Open':
+		        return '<span class="label label-default pull-right">Open</span>';
+		        break;
+		    case 'In Progress':
+		        return '<span class="label label-primary pull-right">In Progress</span>';
+		        break;
+        	case 'Resolved':
+        		return '<span class="label label-success pull-right">Resolved</span>';
+        		break;
+		}
+	}
+
+	function getPriority(val) {
+		switch(val) {
+		    case 'Major':
+		        return '<i class="fa fa-arrow-up" aria-hidden="true" style="color: red;"></i>';
+		        break;
+        	case 'Minor':
+        		return '<i class="fa fa-arrow-down" aria-hidden="true" style="color: green;"></i>';
+        		break;
+		}
 	}
 });
