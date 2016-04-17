@@ -2,6 +2,7 @@ $(document).ready(function() {
 	"use strict";
 	var _url = 'http://localhost:3000';
 	var _home = 'http://localhost:8080/Bug_And_Issue_Tracker';
+	var issueStatus = ['In Progress', 'Open'];
 
 	if ($.cookie('Session')) {
 		var userData = JSON.parse($.cookie('Session'));
@@ -10,7 +11,7 @@ $(document).ready(function() {
 		$('.profile-usertitle-name').text(userData.fname + ' ' + userData.lname);
 		$('.profile-usertitle-job').text(userData.email);
 
-		getIssues(userData.id, 'In Progress');
+		getIssues(userData.id, issueStatus);
 
 		$(document).on('click', '.issue', function() {
 			$('#issues').html('');
@@ -40,12 +41,12 @@ $(document).ready(function() {
 			getIssues();
 			$(document).find('li').removeClass('active');
 			$(this).parent().addClass('active');
-			$('.panel-heading').text(' All Tasks');
+			$('.panel-heading').text(" The Party's tasks");
 			$('.panel-heading').prepend('<i class="fa fa-code"></i>');
 		});
 
 		$(document).on('click', '#overview', function() {
-			getIssues(userData.id, 'In Progress');
+			getIssues(userData.id, issueStatus);
 			$(document).find('li').removeClass('active');
 			$(this).parent().addClass('active');
 			$('.panel-heading').text(' Assigned to me');
@@ -68,6 +69,23 @@ $(document).ready(function() {
 				location.reload();
 			});
 		});
+
+		$('#issues').on('click', '#assign-issue', function() {
+			var issueId = $('#task-id').val();
+			$.ajax({
+				url: _url + '/issues/' + issueId,
+				type: 'PATCH',
+				data: {
+					userId: userData.id,
+					userFname: userData.fname,
+					userLname: userData.lname,
+					updated: getDate()
+				},
+				success: function() {
+					loadTaskView(issueId);
+				}
+			});
+		})
 
 	} else {
 		window.location.href = _home + '/index.html';
@@ -139,7 +157,7 @@ $(document).ready(function() {
 			var span = getProgress(issue.status);
 
 			var assignee = (issue.userId == null) ? 
-			'<a href="#">Assign to me</a>' : issue.userFname + ' ' + issue.userLname;
+			'<a href="#" id="assign-issue">Assign to me</a>' : issue.userFname + ' ' + issue.userLname;
 
 			$('#issues').html(resp);
 			$('#type').append(issue.type);
@@ -150,6 +168,7 @@ $(document).ready(function() {
 			$('#updated').append(issue.updated);
 		
 			$('.cmnt-modal-btn').attr('issue-id', issue.id);
+			$('#task-id').val(issue.id);
 		});
 	}
 

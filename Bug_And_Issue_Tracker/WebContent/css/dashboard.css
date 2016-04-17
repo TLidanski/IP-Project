@@ -8,6 +8,10 @@
   font-size: 1.3em;
 }
 
+.col-xs-12>button {
+  margin-right: 1em;
+}
+
 .form-control {
   font-size: 1.3em;
 }

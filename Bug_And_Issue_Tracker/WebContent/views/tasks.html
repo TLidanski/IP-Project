@@ -11,10 +11,9 @@
 <body>
 	<div class="row">
 		<div class="col-xs-12">
-			<button class="btn btn-danger pull-left">Assign to me</button>
-			<button class="btn btn-default pull-left">Open</button>
-			<button class="btn btn-success pull-left">Resolve</button>
-			<button class="btn btn-primary pull-left">Start Progress</button>
+			<button class="btn btn-default pull-left" id="open-issue">Open</button>
+			<button class="btn btn-success pull-left" id="resolve-issue">Resolve</button>
+			<button class="btn btn-primary pull-left" id="start-issue">Start Progress</button>
 		</div>
 	</div>
 
@@ -75,6 +74,8 @@
 
 	  </div>
 	</div>
+
+	<input type="hidden" id="task-id">
 
 	<script src="../libs/jquery-2.1.4.min.js"></script>
 
