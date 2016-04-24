@@ -27,4 +27,9 @@ $(document).ready(function() {
 				window.location.href = _home + '/index.html';
 			});
 	});
+
+	$(document).on('click', '#log-out', function() {
+		$.removeCookie('Session', {path: '/'});
+		window.location.href = _home + '/index.html';
+	});
 });

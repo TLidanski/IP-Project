@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Onramp;
+    font-family: 'Onramp';
     src: url(../fonts/ONRAMP.ttf);
 }
 
@@ -18,4 +18,10 @@ h3 {
 
 h6 {
 	font-size: 20px;
+}
+
+#log-out {
+	font-size: 2.5em;
+	font-family: 'Onramp';
+	color: #b30000;
 }
