@@ -85,7 +85,27 @@ $(document).ready(function() {
 					loadTaskView(issueId);
 				}
 			});
-		})
+		});
+
+		$('#issues').on('click', '#stop-issue', function() {
+			var issueId = $('#task-id').val();
+			patchIssue(issueId, 'Open');
+		});
+
+		$('#issues').on('click', '#start-issue', function() {
+			var issueId = $('#task-id').val();
+			patchIssue(issueId, 'In Progress');
+		});
+
+		$('#issues').on('click', '#resolve-issue', function() {
+			var issueId = $('#task-id').val();
+			patchIssue(issueId, 'Resolved');
+		});
+
+		$('#issues').on('click', '#open-issue', function() {
+			var issueId = $('#task-id').val();
+			patchIssue(issueId, 'Open');
+		});
 
 	} else {
 		window.location.href = _home + '/index.html';
@@ -117,6 +137,20 @@ $(document).ready(function() {
 				} else {
 					$('#issues').html('<img src="../images/rabota.jpg">');
 				}
+			}
+		});
+	}
+
+	function patchIssue(id, status) {
+		$.ajax({
+			url: _url + '/issues/' + id,
+			type: 'PATCH',
+			data: {
+				status: status,
+				updated: getDate()
+			},
+			success: function() {
+				loadTaskView(id);
 			}
 		});
 	}

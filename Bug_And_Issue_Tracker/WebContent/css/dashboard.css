@@ -35,6 +35,10 @@ b {
 
 body {
   background: #F1F3FA;
+  background-image: url('../images/red.jpg');
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -64,7 +68,7 @@ h1 {
 /* Profile sidebar */
 .profile-sidebar {
   padding: 20px 0 10px 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   font-size: 105%;
   /*opacity: 0.6;*/
 }
@@ -161,6 +165,7 @@ h1 {
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #fff;
+  /*background: #fff;*/
+  background: rgba(255, 255, 255, 0.5);
   min-height: 460px;
 }
