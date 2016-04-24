@@ -107,6 +107,42 @@ $(document).ready(function() {
 			patchIssue(issueId, 'Open');
 		});
 
+		$(document).on('click', '.csm-btn', function() {
+			$('#create-sub-modal').modal();
+		});
+
+		$(document).on('click', '.sub-create-btn', function() {
+			var issueId = $('#task-id').val();
+			$.post(_url + '/subTasks', {
+				title: $('#sub-title').val(),
+				description: $('#sub-desc').val(),
+				issueId: issueId,
+				userFname: userData.fname,
+				userLname: userData.lname,
+				userId: userData.id,
+				type: 'Sub Task',
+				created: getDate()
+			}).done(function(data) {
+				$('#create-sub-modal').modal('hide');
+				loadTaskView(issueId);
+			});
+		});
+
+		/*$(document).on('click', '.sub-task', function() {
+			$.get(_url+'/subTasks/'+this.id).done(function(data) {
+				$('#desc-modal').modal();
+				
+				$('.sub-title p').text(data.title);
+				$('.sub-desc p').text(data.description);
+			});
+
+		});
+
+		$(document).on('hidden.bs.modal', '#desc-modal', function() {
+			$('.sub-title p').text('');
+			$('.sub-desc p').text('');
+		});*/
+
 	} else {
 		window.location.href = _home + '/index.html';
 	}

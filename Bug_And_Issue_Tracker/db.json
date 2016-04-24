@@ -88,7 +88,7 @@
       "priority": "Major",
       "status": "In Progress",
       "created": "16-4-2016",
-      "updated": "16-4-2016",
+      "updated": "24-4-2016",
       "issueComments": [
         {
           "id": 1,
@@ -110,9 +110,9 @@
       "userFname": "Tovarish",
       "userLname": "Putin",
       "priority": "Minor",
-      "status": "In Progress",
+      "status": "Open",
       "created": "16-4-2016",
-      "updated": "16-4-2016",
+      "updated": "24-4-2016",
       "issueComments": [
         {
           "id": 2,
@@ -149,6 +149,27 @@
           "id": 3
         }
       ]
+    },
+    {
+      "type": "task",
+      "issueTitle": "na 3 moreta",
+      "priority": "Major",
+      "status": "In Progress",
+      "created": "17-4-2016",
+      "updated": "24-4-2016",
+      "id": 4,
+      "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin"
+    },
+    {
+      "type": "bug",
+      "issueTitle": "some bug",
+      "priority": "Minor",
+      "status": "Open",
+      "created": "24-4-2016",
+      "updated": "24-4-2016",
+      "id": 5
     }
   ],
   "subTasks": [
@@ -157,11 +178,9 @@
       "title": "Cabron",
       "issueId": 1,
       "description": "Сквозь грозы сияло нам солнце свободы, И Ленин великий нам путь озарил. Нас вырастил Сталин - на верность народу На труд и на подвиги нас вдохновил.",
-      "assignee": {
-        "id": 1,
-        "fname": "Tovarish",
-        "lname": "Putin"
-      }
+      "userId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin"
     },
     {
       "id": 2,
@@ -179,6 +198,76 @@
       "title": "Title2",
       "issueId": 3,
       "description": "Desc3"
+    },
+    {
+      "id": 4
+    },
+    {
+      "title": "El Chapo",
+      "description": "Description like no other",
+      "id": 5
+    },
+    {
+      "title": "Annex Turkey",
+      "description": "Pretty self-explanatory, isn't it?",
+      "id": 6
+    },
+    {
+      "title": "Test the stasks",
+      "description": "qwertyuiop",
+      "issueId": 1,
+      "assignee[id]": 1,
+      "assignee[fname]": "Tovarish",
+      "assignee[lname]": "Putin",
+      "id": 7
+    },
+    {
+      "title": "Let's try again shall we?",
+      "description": "hfgzkghjz",
+      "issueId": 4,
+      "assignee[id]": 1,
+      "assignee[fname]": "Tovarish",
+      "assignee[lname]": "Putin",
+      "id": 8
+    },
+    {
+      "title": "another sub task",
+      "description": "ghgghzhgdjz",
+      "issueId": 4,
+      "assignee[id]": 1,
+      "assignee[fname]": "Tovarish",
+      "assignee[lname]": "Putin",
+      "id": 9
+    },
+    {
+      "title": "i am the god",
+      "description": "the game",
+      "issueId": 1,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "type": "Sub Task",
+      "created": "24-4-2016",
+      "id": 10
+    },
+    {
+      "title": "fdsugf",
+      "description": "fuidshguis",
+      "issueId": 5,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "type": "Sub Task",
+      "created": "24-4-2016",
+      "id": 11
+    },
+    {
+      "title": "dada",
+      "description": "dada",
+      "issueId": 2,
+      "userFname": "Tovarish",
+      "userLname": "Putin",
+      "type": "Sub Task",
+      "created": "24-4-2016",
+      "id": 12
     }
   ],
   "issueComments": [
