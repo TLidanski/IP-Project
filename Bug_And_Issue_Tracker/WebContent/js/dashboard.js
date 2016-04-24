@@ -128,7 +128,7 @@ $(document).ready(function() {
 			});
 		});
 
-		/*$(document).on('click', '.sub-task', function() {
+		$(document).on('click', '.sub-task', function() {
 			$.get(_url+'/subTasks/'+this.id).done(function(data) {
 				$('#desc-modal').modal();
 				
@@ -141,7 +141,7 @@ $(document).ready(function() {
 		$(document).on('hidden.bs.modal', '#desc-modal', function() {
 			$('.sub-title p').text('');
 			$('.sub-desc p').text('');
-		});*/
+		});
 
 	} else {
 		window.location.href = _home + '/index.html';
